@@ -20,4 +20,11 @@ function calculateOvertimePay(rate, hours) {
     if (hours <= 40) return 0;
     const overtimeHours = hours - 40; 
     return overtimeHours * rate * 1.5; 
-}
+}  
+// return section 
+function taxCalculator(rate) {
+    return function(amount) {
+        return amount * rate; 
+    };
+
+} 
