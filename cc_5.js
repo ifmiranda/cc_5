@@ -28,3 +28,8 @@ function taxCalculator(rate) {
     };
 
 } 
+// Step 5 : Tax Calculation 
+const tax15 = taxCalculator(0.15); 
+function calculateTaxes(grossPay) {
+    return tax15(grossPay);
+}
