@@ -15,3 +15,9 @@ function calculateBasePay(rate, hours) {
     const regularHours = hours > 40 ? 40 : hours;
     return rate * regularHours * rate; 
 } 
+// Step 4: Overtime Pay Calculation 
+function calculateOvertimePay(rate, hours) {
+    if (hours <= 40) return 0;
+    const overtimeHours = hours - 40; 
+    return overtimeHours * rate * 1.5; 
+}
