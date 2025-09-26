@@ -14,4 +14,4 @@ const employees = [
 function calculateBasePay(rate, hours) { 
     const regularHours = hours > 40 ? 40 : hours;
     return rate * regularHours * rate; 
-}
+} 
