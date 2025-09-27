@@ -48,4 +48,7 @@ function processPayroll(employee) {
         grossPay: round2(grossPay),
         netPay: round2(netPay), 
     };
+} 
+function displayPayroll(playrollObj) {
+    console.log(playrollObj); 
 }
