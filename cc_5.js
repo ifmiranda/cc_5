@@ -13,7 +13,7 @@ const employees = [
 
 function calculateBasePay(rate, hours) { 
     const regularHours = hours > 40 ? 40 : hours;
-    return rate * regularHours * rate; 
+    return regularHours * rate; 
 } 
 // Step 4: Overtime Pay Calculation 
 function calculateOvertimePay(rate, hours) {
@@ -26,8 +26,7 @@ function taxCalculator(rate) {
     return function(amount) {
         return amount * rate; 
     };
-
-} 
+}
 // Step 5 : Tax Calculation 
 const tax15 = taxCalculator(0.15); 
 function calculateTaxes(grossPay) {
@@ -52,3 +51,13 @@ function processPayroll(employee) {
 function displayPayroll(playrollObj) {
     console.log(playrollObj); 
 }
+console.log("Test base(20,35):", calculateBasePay(20,35)); 
+console.log("Test overtime(20,45):", calculateOvertimePay(20, 45)); 
+console.log("Test tax (1000):", calculateTaxes(1000)); 
+
+// 
+employees.forEach(function(emp) {
+    const payroll = processPayroll(emp); 
+    displayPayroll(payroll); 
+});  
+
